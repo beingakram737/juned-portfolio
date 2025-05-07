@@ -1,0 +1,271 @@
+/*
+  📄 style.css - Civil Engineer Portfolio Website
+  Author: Shaikh Mohammed Akram (for Shaikh Moahmmed Juned)
+  Description: Stylish, modern, and responsive CSS for civil engineering website with hover effects and refined alignments
+*/
+
+/* 🔧 Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f6f8;
+    color: #2c3e50;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  /* 🧱 Header */
+  header {
+    background: #1e3a5f;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  /* 🏙️ Hero Section */
+  .hero {
+    position: relative;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+    filter: blur(5px) brightness(0.5);
+    z-index: 0;
+  }
+  
+  .hero .container {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h2 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+    margin-bottom: 15px;
+  }
+  
+  .hero p {
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  }
+  
+  .hero .btn {
+    background: #ffffff;
+    color: #1e3a5f;
+    padding: 12px 25px;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+  }
+  
+  .hero .btn:hover {
+    background-color: #dfe6ec;
+    transform: scale(1.05);
+  }
+  
+  /* 👤 About Section */
+  .about {
+    background: #ffffff;
+    padding: 60px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+    text-align: center;
+  }
+  
+  .about h2 {
+    font-family: 'Playfair Display', serif;
+    color: #1e3a5f;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .about p {
+    font-size: 1.05rem;
+    color: #444;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* 🛠️ Services */
+  .services {
+    background-color: #eef2f5;
+    padding: 60px 20px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .services-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .services-left, .services-extra {
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .services h2, .services h3 {
+    color: #1e3a5f;
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .services ul, .icons-list {
+    padding-left: 20px;
+    line-height: 1.8;
+    color: #2c3e50;
+    text-align: left;
+  }
+  
+  .icons-list li:hover {
+    color: #1e3a5f;
+    transform: scale(1.02);
+    transition: 0.2s;
+  }
+  
+  /* 🖼️ Projects Gallery */
+  .projects {
+    background-color: #ffffff;
+    padding: 60px 20px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .projects h2 {
+    color: #1e3a5f;
+    margin-bottom: 30px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  /* 📨 Contact Section */
+  .contact {
+    background-color: #f0f5f8;
+    padding: 60px 20px;
+    border-radius: 12px;
+    text-align: center;
+  }
+  
+  .contact h2 {
+    color: #1e3a5f;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .contact-form {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    transition: 0.3s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #1e3a5f;
+    outline: none;
+    box-shadow: 0 0 5px rgba(30, 58, 95, 0.3);
+  }
+  
+  .contact-form button {
+    background-color: #1e3a5f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #163254;
+  }
+  
+  /* 🔻 Footer */
+  footer {
+    background: #1e3a5f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    border-top: 4px solid #fff;
+  }
+  
+  /* 🔄 Responsive Media Queries */
+  @media (max-width: 768px) {
+    .services-wrapper {
+      flex-direction: column;
+    }
+    .gallery img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
